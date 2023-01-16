@@ -7,6 +7,8 @@
 #include<math.h>
 #include<intrin.h>
 #include<stdint.h>
+//привет
+int ggg = 0;
 
 __device__ float coef(float* matrix, int n, int k, int j)
 {
