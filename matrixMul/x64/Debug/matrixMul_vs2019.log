@@ -1,68 +1,68 @@
 ﻿  Compiling CUDA source file matrixMul.cu...
   
-  C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\bin\nvcc.exe" -gencode=arch=compute_50,code=\"sm_50,compute_50\" -gencode=arch=compute_52,code=\"sm_52,compute_52\" -gencode=arch=compute_60,code=\"sm_60,compute_60\" -gencode=arch=compute_61,code=\"sm_61,compute_61\" -gencode=arch=compute_70,code=\"sm_70,compute_70\" -gencode=arch=compute_75,code=\"sm_75,compute_75\" -gencode=arch=compute_80,code=\"sm_80,compute_80\" -gencode=arch=compute_86,code=\"sm_86,compute_86\" -gencode=arch=compute_90,code=\"sm_90,compute_90\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64" -x cu   -I./ -I../../../Common -I./ -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\/include" -I../../../Common -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\include"  -G   --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler "/wd 4819"  --threads 0 -g  -DWIN32 -DWIN32 -D_MBCS -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64/Debug/vc142.pdb /FS /Zi /RTC1 /MTd " -o "C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\x64\Debug\matrixMul.cu.obj" "C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu" 
+  C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\bin\nvcc.exe" -gencode=arch=compute_50,code=\"sm_50,compute_50\" -gencode=arch=compute_52,code=\"sm_52,compute_52\" -gencode=arch=compute_60,code=\"sm_60,compute_60\" -gencode=arch=compute_61,code=\"sm_61,compute_61\" -gencode=arch=compute_70,code=\"sm_70,compute_70\" -gencode=arch=compute_75,code=\"sm_75,compute_75\" -gencode=arch=compute_80,code=\"sm_80,compute_80\" -gencode=arch=compute_86,code=\"sm_86,compute_86\" -gencode=arch=compute_90,code=\"sm_90,compute_90\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64" -x cu   -I./ -I../../../Common -I./ -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\/include" -I../../../Common -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\include"  -G   --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler "/wd 4819"  --threads 0 -g  -DWIN32 -DWIN32 -D_MBCS -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64/Debug/vc142.pdb /FS /Zi /RTC1 /MTd " -o C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\x64\Debug\matrixMul.cu.obj "C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu" 
   matrixMul.cu
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
-  
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(35): warning #177-D: variable "det" was declared but never referenced
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(47): warning #951-D: return type of function "main" must be "int"
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
-  tmpxft_00000e8c_00000000-7_matrixMul.compute_90.cudafe1.cpp
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(42): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(49): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(63): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\Samples\0_Introduction\matrixMul\matrixMul.cu(84): warning C4996: 'cudaThreadSynchronize': объявлен deprecate
-  matrixMul_vs2019.vcxproj -> C:\Users\ytdre\Desktop\Cuda Samples\cuda-samples-master\bin\win64\Debug\matrixMul.exe
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning #177-D: variable "det" was declared but never referenced
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
+  
+  tmpxft_000061cc_00000000-7_matrixMul.compute_90.cudafe1.cpp
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(44): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(51): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(65): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(86): warning C4996: 'cudaThreadSynchronize': объявлен deprecate
+  matrixMul_vs2019.vcxproj -> C:\Users\ytdre\Documents\bin\win64\Debug\matrixMul.exe

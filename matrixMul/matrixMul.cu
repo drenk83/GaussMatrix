@@ -7,10 +7,9 @@
 #include<math.h>
 #include<intrin.h>
 #include<stdint.h>
-//привет
-int ggg = 0;
 
-__device__ float coef(float* matrix, int n, int k, int j)
+// Работа с GPU
+__device__ double coef(float* matrix, int n, int k, int j)
 {
 	return matrix[j + n * (k + 1)] / matrix[j * (n + 1)];
 }
@@ -30,7 +29,8 @@ __global__ void GAUSS(float* matrix, int n)
 		}
 	}
 }
-//определитель
+
+//определитель для CPU
 void determinant(float* A, int n)
 {
 	int i, j, k;
@@ -103,13 +103,13 @@ void main()
 	}
 	printf("\n\n");
 
-	printf("GPU time: %.2f milliseconds\n", gpuTime);
+	printf("GPU time: %g milliseconds\n", gpuTime);
 	cudaEventDestroy(start);
 	cudaEventDestroy(stop);
 
 	long double det = 1;
 	for (int i = 0; i < n * n; i += (n + 1)) det *= HostMatrix[i];
-	printf("Determinant by GPU = %f ", det);
+	printf("Determinant by GPU = %g ", det);
 	printf("\n\n");
 
 	//Oпределитель на CPU
@@ -117,14 +117,15 @@ void main()
 	start1 = (float)clock() / CLOCKS_PER_SEC;
 	determinant(cpuMatrix, n);
 	start1 = (float)clock() / CLOCKS_PER_SEC - start1;
-	printf("CPU time: %.20f milliseconds", start1 * 1000);
+	printf("CPU time: %g milliseconds", start1 * 1000);
 	for (int i = 0; i < n; i++)
 	{
 		det *= cpuMatrix[i * n + i];
 	}
-	printf("\nDeterminant by CPU = %f \n", det);
+	printf("\nDeterminant by CPU = %g \n", det);
 
 	//Освобождение памяти
 	cudaFree(DeviceMatrix);
 	free(HostMatrix);
+	free(cpuMatrix);
 }
