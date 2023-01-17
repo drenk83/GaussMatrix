@@ -4,12 +4,9 @@
 #include<string.h>
 #include<stdlib.h>
 #include<time.h>
-#include<math.h>
-//#include<intrin.h>
-//#include<stdint.h>
 
 // Работа с GPU
-__device__ long double coef(float* matrix, int n, int k, int j)
+__device__ double coef(float* matrix, int n, int k, int j)
 {
 	return matrix[j + n * (k + 1)] / matrix[j * (n + 1)];
 }
@@ -62,7 +59,7 @@ void main()
 	printf("Initial Matrix:");
 	for (int i = 0; i < n * n; i++)
 	{
-		HostMatrix[i] = rand() % 8;
+		HostMatrix[i] = 1 + rand() % 9;
 		//if (i % n == 0) printf("\n");
 		//printf("%g ", HostMatrix[i]);
 	}
@@ -102,7 +99,7 @@ void main()
 	for (int i = 0; i < n * n; i++)
 	{
 		//if (i % n == 0) printf("\n");
-		//printf("%f ", HostMatrix[i]);
+		//printf("%g ", HostMatrix[i]);
 	}
 	printf("\n\n");
 
@@ -111,7 +108,10 @@ void main()
 	cudaEventDestroy(stop);
 
 	long double det = 1;
-	for (int i = 0; i < n * n; i += (n + 1)) det *= HostMatrix[i];
+	for (int i = 0; i < n; i++)
+	{
+		det *= HostMatrix[i * n + i];
+	}
 	printf("Determinant by GPU = %g ", det);
 	printf("\n\n");
 

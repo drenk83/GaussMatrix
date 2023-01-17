@@ -60,7 +60,7 @@ C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(37): warning 
   
 C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(49): warning #951-D: return type of function "main" must be "int"
   
-  tmpxft_0000204c_00000000-7_matrixMul.compute_90.cudafe1.cpp
+  tmpxft_000040ac_00000000-7_matrixMul.compute_90.cudafe1.cpp
 C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(44): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
 C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(51): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 C:\Users\ytdre\Documents\GitHub\GaussMatrix\matrixMul\matrixMul.cu(65): warning C4244: =: преобразование "int" в "float", возможна потеря данных
