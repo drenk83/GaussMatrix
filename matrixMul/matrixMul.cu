@@ -5,11 +5,11 @@
 #include<stdlib.h>
 #include<time.h>
 #include<math.h>
-#include<intrin.h>
-#include<stdint.h>
+//#include<intrin.h>
+//#include<stdint.h>
 
 // Работа с GPU
-__device__ double coef(float* matrix, int n, int k, int j)
+__device__ long double coef(float* matrix, int n, int k, int j)
 {
 	return matrix[j + n * (k + 1)] / matrix[j * (n + 1)];
 }
@@ -62,9 +62,9 @@ void main()
 	printf("Initial Matrix:");
 	for (int i = 0; i < n * n; i++)
 	{
-		HostMatrix[i] = 1 + rand() % 7;
-		if (i % n == 0) printf("\n");
-		printf("%g ", HostMatrix[i]);
+		HostMatrix[i] = rand() % 8;
+		//if (i % n == 0) printf("\n");
+		//printf("%g ", HostMatrix[i]);
 	}
 	printf("\n");
 	memcpy(cpuMatrix, HostMatrix, n * n * sizeof(float));
@@ -81,8 +81,11 @@ void main()
 	cudaEventCreate(&stop);
 	cudaEventRecord(start, 0);
 
-	// Запуск ядра из 1 блока по n потоков
-	GAUSS <<< 1, n >>> (DeviceMatrix, n);
+	// Запуск ядра
+
+	if (n<1024) GAUSS << < dim3(1,1,1), dim3(n,1,1) >> > (DeviceMatrix, n);
+	else GAUSS << < dim3(1024/n+1,1,1), dim3(1024,1,1) >> > (DeviceMatrix, n);
+
 	cudaThreadSynchronize();
 
 	cudaEventRecord(stop, 0);
@@ -98,8 +101,8 @@ void main()
 	printf("Gauss matrix:");
 	for (int i = 0; i < n * n; i++)
 	{
-		if (i % n == 0) printf("\n");
-		printf("%f ", HostMatrix[i]);
+		//if (i % n == 0) printf("\n");
+		//printf("%f ", HostMatrix[i]);
 	}
 	printf("\n\n");
 
@@ -112,7 +115,7 @@ void main()
 	printf("Determinant by GPU = %g ", det);
 	printf("\n\n");
 
-	//Oпределитель на CPU
+	//Работа CPU
 	det = 1;
 	start1 = (float)clock() / CLOCKS_PER_SEC;
 	determinant(cpuMatrix, n);
